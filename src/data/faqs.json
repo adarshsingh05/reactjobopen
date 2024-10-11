@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is V-Jobs?",
+    "answer": "V-Jobs is a platform designed to connect freshers with 0-1 year of experience to startups looking for talented and motivated candidates. It helps job seekers find their first job while offering startups a streamlined hiring process."
+  },
+  {
+    "question": "How do I post a job as a startup?",
+    "answer": "As a startup, you can post a job by logging in and navigating to the 'Post Job' section. Fill in the job details, including required skills and experience, and submit the form to create a job listing."
+  },
+  {
+    "question": "How can I search for jobs?",
+    "answer": "Freshers can search for jobs using keywords, industry, or location via the search bar on the homepage or the dedicated job search page."
+  },
+  {
+    "question": "How do I apply for a job?",
+    "answer": "To apply for a job, click on the job listing and follow the application instructions. You may need to upload your resume and write a cover letter outlining your skills and passion."
+  },
+  {
+    "question": "Can I save jobs to apply for later?",
+    "answer": "Yes, you can save jobs by clicking the 'Save Job' button on the job listing. Saved jobs can be accessed from your profile under the 'Saved Jobs' section."
+  },
+  {
+    "question": "How do I track my job applications?",
+    "answer": "Freshers can track the status of their applications in the 'Applications' section of their profile. This section will show updates on the progress of each job application."
+  }
+]
