@@ -14,6 +14,7 @@ import { Line } from "react-chartjs-2";
 import { useApplicationContext } from "@/context/applicationContext";
 import UserFeedbackPage from "@/api/viewuserfeedback";
 import Reviewsgiven from "@/api/seeyourgivenfeedbacks";
+import { useJobContext } from "@/context/jobcontext";
 
 
 // function for generating chart
@@ -274,6 +275,8 @@ const handleDownloadReport = () => {
        
         ) : (
           <>
+            {/* const {createdJobsCount} = useJobContext(); */}
+
         
           <div >
             {/* Header */}
@@ -285,7 +288,7 @@ const handleDownloadReport = () => {
             {/* Summary Section */}
             <div className="texte-center text-xl flex flex-row justify-evenly">
               <div>
-                <h3>Summary - {applicationCount} Jobs Posted</h3>
+                <h3>Summary - 2 Jobs Posted</h3>
               </div>
             </div>
     

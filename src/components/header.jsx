@@ -83,18 +83,8 @@ useEffect(()=>{
          }}
          >
           <UserButton.MenuItems>
-            {/* first option */}
-            <UserButton.Link
-            label= {user?.unsafeMetadata?.role==="recruiter" ? 'Track Your Jobs ' : 'Track Your Applications'}
-            labelIcon={<BriefcaseBusiness size={15}/>}
-            href='/my-jobs'
-            />
-            {/* second option  */}
-            <UserButton.Link
-             label={user?.unsafeMetadata?.role==="recruiter" ? 'My Posted Jobs ' : 'My Saved Jobs'}
-            labelIcon={<BriefcaseBusiness size={15}/>}
-            href={user?.unsafeMetadata?.role==="recruiter" ? 'my-jobs' : '/saved-jobs'}
-            />
+           
+          
             </UserButton.MenuItems>
           </UserButton>
       </SignedIn>

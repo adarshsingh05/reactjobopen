@@ -33,6 +33,7 @@ import EmailGenerator from './emailverification/displayemail';
 import EmailVerifier from './emailverification/displayemail';
 import ColdMailTemplate from './components/mailtemplate';
 import ColdMailBuilder from './components/mailtemplate';
+import { JobProvider } from './context/jobcontext';
 // Defining the router dom and creating the route for the multi pages app.
 const router = createBrowserRouter([
   {
@@ -236,11 +237,16 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    <>
     <ApplicationProvider> {/* Wrapping the entire app with ApplicationProvider */}
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <RouterProvider router={router} />
       </ThemeProvider>
     </ApplicationProvider>
+
+    </>
+
+    
   );
 }
 

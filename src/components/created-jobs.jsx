@@ -26,24 +26,31 @@ const CreatedJobs = () => {
       {loadingCreatedJobs ? (
         <BarLoader className="mt-4" width={"100%"} color="#36d7b7" />
       ) : (
-        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {createdJobs?.length ? (
-            createdJobs.map((job) => {
-              return (
-                <JobCard
-                  key={job.id}
-                  job={job}
-                  onJobAction={fnCreatedJobs}
-                  isMyJob
-                />
-              );
-            })
-          ) : (
-            <div className="text-center flex flex-row justify-evenly">
-            <div >No Jobs Found 😢</div>
-            </div>
-          )}
-        </div>
+        <>
+          <div className="mt-4 text-center">
+            <span className="text-lg font-semibold">
+             Summary : You have created {createdJobs?.length || 0} Jobs 
+            </span>
+          </div>
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {createdJobs?.length ? (
+              createdJobs.map((job) => {
+                return (
+                  <JobCard
+                    key={job.id}
+                    job={job}
+                    onJobAction={fnCreatedJobs}
+                    isMyJob
+                  />
+                );
+              })
+            ) : (
+              <div className="text-center flex flex-row justify-evenly">
+                <div>No Jobs Found 😢</div>
+              </div>
+            )}
+          </div>
+        </>
       )}
     </div>
   );
