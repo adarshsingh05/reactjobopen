@@ -77,3 +77,22 @@ export async function fetchFeedbackrec(token,user_id) {
     return data;
 }
 
+// all feedbacks
+export async function allFeedbackrec(token) {
+    const supabase = await supabaseClient(token);
+
+    // Fetch feedback from the feedback table
+    const { data, error } = await supabase
+        .from("recruiterreviews") // Make sure this matches your table name in Supabase
+        .select("*")
+        
+
+
+    if (error) {
+        console.error("Error fetching feedback:", error);
+        return null;
+    }
+
+    return data;
+}
+

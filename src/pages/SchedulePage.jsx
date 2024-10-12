@@ -76,7 +76,7 @@ const SchedulePage = () => {
     <div className="p-6">
       {/* Candidate Name */}
       <h1 className="text-3xl font-semibold text-center mb-6">
-        {user?.firstName}'s Schedule
+        {user?.firstName}'s Schedule (Comming Soon)
       </h1>
 
       {/* Date Bar with Arrows */}

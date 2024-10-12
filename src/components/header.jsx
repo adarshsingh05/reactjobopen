@@ -55,11 +55,11 @@ useEffect(()=>{
       <SignedIn>
 {/* show this button only when the user is recruiter so add a condition */}
         {user?.unsafeMetadata?.role==="recruiter" &&(
-        <Link to="/post-jobs">
+        <Link to="/dashboard">
         <Button variant="red" className='rounded-full'> 
           {/* adding a logo */}
-          <PenBox size={20} className='mr-2' />
-          Post Job</Button>
+          <LayoutDashboard size={20} className='mr-2' />
+          Dashboard</Button>
         </Link>
         )}
 

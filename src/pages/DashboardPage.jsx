@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import React from "react";
 import jsPDF from "jspdf";
 import GithubStyleHeatmap from "@/components/GithubStyleHeatmap";
-import Chart from "@/components/Chart";
+import ReactTypingEffect from "react-typing-effect";
 import ReferralsChart from "@/components/ReferralsChart";
 import PieChart from "@/components/PieChart";
 import LinkedInShareButton from "@/components/LinkedInShareButton";
@@ -13,6 +13,7 @@ import { ArrowDownTrayIcon } from "@heroicons/react/24/outline"; // Updated impo
 import { Line } from "react-chartjs-2";
 import { useApplicationContext } from "@/context/applicationContext";
 import UserFeedbackPage from "@/api/viewuserfeedback";
+import Reviewsgiven from "@/api/seeyourgivenfeedbacks";
 
 
 // function for generating chart
@@ -268,14 +269,123 @@ const handleDownloadReport = () => {
             <div className='rounded-md bg-[#020817]  w-full border-[3px] border-[#70c9d9] mb-8 lg:mb-0'>  
               <GithubStyleHeatmap/>
             </div>
+           
           </>
+       
         ) : (
-          <div className="text-center text-white text-2xl">
-            Coming soon...
-          </div>
-        )}
-      </main>
+          <>
+        
+          <div >
+            {/* Header */}
+            <header className="text-center">
+              <h1 className="text-4xl font-bold text-white">Welcome, {user?.firstName} !!</h1>
+              <p className="text-gray-400 mt-2">Manage your Applications and portfolio</p>
+            </header>
+    
+            {/* Summary Section */}
+            <div className="texte-center text-xl flex flex-row justify-evenly">
+              <div>
+                <h3>Summary - {applicationCount} Jobs Posted</h3>
+              </div>
+            </div>
+    
+            {/* Cards Section */}
+            <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 mb-6">
+              {/* Job Applications Card */}
+              <Card className="bg-transparent text-white">
+                <CardHeader>
+                  <CardTitle>My Posted Jobs</CardTitle>
+                  <CardDescription>View and manage your posted jobs at one place</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button className='bg-green-500' onClick={() => handleNavigate('/my-jobs')}>My Jobs</Button>
+                </CardContent>
+              </Card>
+    
+              {/* Profile Card */}
+              <Card className="bg-transparent text-white">
+                <CardHeader>
+                  <CardTitle>My Profile</CardTitle>
+                  <CardDescription>Update your profile information</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button className='bg-green-500' onClick={() => navigate('/userpage')}>My Profile</Button>
+                </CardContent>
+              </Card>
+    
+              {/* Saved Jobs */}
+              <Card className="bg-transparent text-white">
+                <CardHeader>
+                  <CardTitle>Job Candidates</CardTitle>
+                  <CardDescription>Access and manage all of your job applicants here </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button className='bg-green-500' onClick={() => handleNavigate('/saved-jobs')}>View Job Candidates</Button>
+                </CardContent>
+              </Card>
+            </section>
+    
+           
+    
+            
+             <div className="flex flex-row w-[auto]">
+
+             
+    
+              {/* Recruiter Reviews Section */}
+              <section className="w-full md:w-[100%] overflow-y-auto mt-5 h-[640px]">
+                <Reviewsgiven/>
+              </section>
+              
+
+          
+    
+            {/* Section for showing the Interview  */}
+            <div className="flex gap-6 h-[300px] w-[100%] mt-5">
+              {/* Interviews Held Per Month Chart */}
+              <div className="w-[100%] ml-8">
+                <Card className="bg-#020817 text-white h-[100%]">
+                  <CardHeader>
+                    <CardTitle className="p-2 border-b border-gray-600">Interviews Held Per Month (Feature Comming Soon)</CardTitle>
+                  </CardHeader>
+                  <CardContent className="h-[95%]">
+                    <InterviewChart className="h-[100%]" />
+                  </CardContent>
+                </Card>
+              </div>
+              </div>
+              </div>
+    
+           
+
+            
+            </div>
+    
+           
+            {/* <div className='text-center text-xl font-semibold mb-4'> Your Login Consistency</div>
+            <div className='rounded-md bg-[#020817]  w-full border-[3px] border-[#70c9d9] mb-8 lg:mb-0'>  
+              <GithubStyleHeatmap/>
+            </div>
+          </div> */}
+        
+           
+           <h2 className="text-2xl sm:text-3xl font-bold text-center mt-[-250px]">
+        <ReactTypingEffect
+          text="More Features comming soon ..."
+          speed={20} // typing speed
+          eraseSpeed={100}        // Erase speed (faster)
+          eraseDelay={100}      // Delay before erasing starts
+          typingDelay={50}  // delay before erasing
+        />
+      </h2>
+        </>)}
+        
+       
+       </main>
+    
+       
     );
+   
 }
 
 
