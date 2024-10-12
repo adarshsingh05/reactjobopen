@@ -110,7 +110,7 @@ const EmailGenerator = () => {
       return;
     }
 
-    const apiKey = '044b239d20864646a49f7472a26e79e9'; // Replace with actual API key
+    const apiKey = '044b239d20864646a49f7472a26e79e9'; 
     try {
       const response = await axios.get(`https://api.zerobounce.net/v2/validate`, {
         params: {

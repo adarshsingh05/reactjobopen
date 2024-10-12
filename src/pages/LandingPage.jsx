@@ -54,13 +54,13 @@ const LandingPage = () => {
         </Link>
 
         <Link to={user?.unsafeMetadata?.role === "candidate" ? '#' : '/post-jobs'}>
-          <Button 
-            variant="red" 
-            size="xl" 
-            disabled={user?.unsafeMetadata?.role === "candidate"}>
-            Post Jobs
-          </Button>
-        </Link>
+  <Button 
+    className='bg-green-500 text-white' // Set background to green and text to white
+    size="xl" 
+    disabled={user?.unsafeMetadata?.role === "candidate"}>
+    Post Jobs
+  </Button>
+</Link>
 
  
       </div>
