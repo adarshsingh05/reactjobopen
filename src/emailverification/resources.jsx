@@ -32,7 +32,7 @@ const Resources = () => {
       <p className="text-base font-normal text-gray-500 dark:text-gray-400">
 Click on the below card naming get the recruiter mail ID to proceed ahead      </p>
       {/* Connecting Line */}
-      <div className="hidden md:block absolute top-2/4 -right-8 md:w-8 h-1 bg-blue-500"></div>
+      <div className="hidden md:block absolute top-2/4 -right-8 md:w-8 h-1 bg-green-500"></div>
       <div >
  </div>
     </div>
@@ -63,8 +63,8 @@ Enter the recruiter's details such as first name, last name and company name    
       <p className="text-base font-normal text-gray-500 dark:text-gray-400">
 click on generate email id to get all possible emails then validate them to get the actual one      </p>
       {/* Connecting Line */}
-      <div className="hidden md:block absolute top-2/4 -right-8 md:w-8 h-1 bg-blue-500"></div>
-      <div className="block md:hidden w-1 h-16 bg-blue-500 mt-4"></div>
+      <div className="hidden md:block absolute top-2/4 -right-8 md:w-8 h-1 bg-green-500"></div>
+      <div className="block md:hidden w-1 h-16 bg-green-500 mt-4"></div>
     </div>
 
     {/* Timeline Item */}
@@ -123,19 +123,35 @@ once you get the mail Id proceed to cold mail and all set. Don't have cold maili
    
 
         {/* Get Cold Emailing Template Card */}
-        <Card className="cursor-pointer hover:shadow-lg mt-6" onClick={() => navigate('/getcoldemailtemplate')}>
-          <CardHeader className="bg-green-600 text-white p-4 rounded-t-md">
-            <h3 className="text-lg font-bold">Get Cold Emailing Template</h3>
-          </CardHeader>
-          <CardContent className="p-4">
-            <p className="text-gray-700 dark:text-gray-200">
-              Access effective cold emailing templates to increase your chances of landing an interview.
-            </p>
-            <Button variant="link" className="mt-4 text-green-600 hover:underline">
-              Explore
-            </Button>
-          </CardContent>
-        </Card>
+        <div className='w-full'>
+  {/* Cards Section */}
+  <Card className="cursor-pointer hover:shadow-lg mt-6 w-full bg-transparent" onClick={() => navigate('/recruitersmailid')}>
+    <CardHeader className="bg-green-600 text-white p-4 rounded-t-md text-center">
+      <h3 className="text-lg font-bold">Get Tailored cold mail Templates</h3>
+    </CardHeader>
+    <CardContent className="flex flex-col md:flex-row items-center md:items-start justify-between">
+      {/* Image Section */}
+      <img
+        src="/emailcold.jpeg"
+        alt="Recruiter Email"
+        className="h-[200px] w-[90%] sm:h-[250px] sm:w-[100%] md:h-[337px] md:w-[350px] mt-4 border rounded-md"
+      />
+      
+      {/* Text and Button Section */}
+      <div className="flex flex-col justify-center items-center text-center md:text-left  mt-4 lg:mt-[110px] md:ml-5 md:mt-0">
+        <p className="text-gray-700 dark:text-gray-200">
+         Get tons of cold mail template based on job description and your skill. With just one click get you next AI powered cold mail completely for free tailored as per your needs
+        </p>
+        <Button
+          // variant="blue"
+          className="mt-4 md:mt-10 w-[120px] mx-auto md:ml-[87px] px-5 bg-green-500"
+        >
+          Explore
+        </Button>
+      </div>
+    </CardContent>
+  </Card>
+</div>
 
       </div>
     </div>
