@@ -94,17 +94,26 @@ useEffect(()=>{
 
     {/* using the state whenevr user login redirect to the onboarding screen */}
     {showSignIn && (
-      <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'
-      /* adding a function so that whenver we click outside the div it should dissapear */
-      onClick={handleOverlayClick}
-      >
-      <SignIn
+  <div className='fixed inset-0 flex items-center justify-center bg-black z-50 opacity-100'
+    // Ensure the overlay covers the whole screen, removes transparency, and sits above other content
+    onClick={handleOverlayClick}
+  >
+    <SignIn
       signUpForceRedirectUrl='/onboarding'
       fallbackRedirectUrl='/onboarding'
-      
-      />
-      </div>
-    )}
+      appearance={{
+        // variables: {
+        //   colorPrimary: '#000000', // Set primary color if needed
+        // },
+        elements: {
+          card: 'bg-grey-500 text-white shadow-lg rounded-lg', // Set background to black, make text white
+          formFieldInput: 'bg-gray-800 text-white', // Style input fields
+          buttonPrimary: 'bg-red-600 text-white hover:bg-blue-700', // Style primary buttons
+        }
+      }}
+    />
+  </div>
+)}
    </>
   )
 }
