@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'; // Shadcn UI Button component
 import { Card, CardContent } from '@/components/ui/card'; // Shadcn UI Card component
 import axios from 'axios';
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/solid'; // Heroicons v2
+import { Link } from 'react-router-dom';
 
 const CircularProgress = ({ used, total }) => {
   const radius = 40; // Radius of the circle
@@ -155,6 +156,14 @@ const EmailGenerator = () => {
           Your today's Credit Used For Email Validation: {validationsUsed}/{maxValidations}
         </div>
       </div>
+
+      <Link to ='/pythonmain'>
+      <div className='text-center text-xl'>Don't Know about the Recruiter ? Get Companywise Mail Id's
+        <hr/>
+        <Button className='mt-2 bg-green-500 text-white hover:bg-blue-400' >Explore</Button>
+      </div>
+
+      </Link>
       
       <div className="flex flex-col md:flex-row items-center gap-4 mb-6 mt-8">
         <Input
