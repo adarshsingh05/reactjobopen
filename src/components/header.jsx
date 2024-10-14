@@ -29,6 +29,7 @@ useEffect(()=>{
   const handleOverlayClick=(e)=>{
     if(e.target===e.currentTarget){
       setShowSignIn(false);
+      setSearch({});
     }
   }
 
@@ -50,7 +51,8 @@ useEffect(()=>{
 
     <div className='flex gap-8'>
       <SignedOut>
-      <Button variant="outline" onClick={()=>setShowSignIn(true)}>Login</Button>
+      <Button variant="outline" onClick={()=>setShowSignIn(true)}>Get Into Vjobs</Button>
+      
       </SignedOut>
       <SignedIn>
 {/* show this button only when the user is recruiter so add a condition */}
